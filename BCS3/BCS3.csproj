@@ -44,9 +44,10 @@
   <ItemGroup>
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />
-    <Compile Include="VisualNovelState.cs" />
+    <Compile Include="Corey\VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="Keenan\ArcadeBroccoliShooter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateManager.cs" />
@@ -112,6 +113,7 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Keenan\" />
     <Folder Include="Content\Mason\" />
     <Folder Include="Mason\" />
   </ItemGroup>
