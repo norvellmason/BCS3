@@ -42,6 +42,11 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
+    <Compile Include="Keenan\Broccoli.cs" />
+    <Compile Include="Keenan\Child.cs" />
+    <Compile Include="Keenan\Demon.cs" />
+    <Compile Include="Keenan\SlingShot.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />
     <Compile Include="Corey\VisualNovelState.cs" />
@@ -116,12 +121,10 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Jon\" />
-  </ItemGroup>
-  <ItemGroup>
     <Folder Include="Content\Keenan\" />
     <Folder Include="Content\Mason\" />
-    <Folder Include="Mason\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <Content Include="Content\corey\rectangleBase.png" />
