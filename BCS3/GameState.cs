@@ -14,12 +14,21 @@ namespace BCS_3
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
+        private List<Broccoli> broccolis;
 
         public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
+            this.LoadContent();
+            this.broccolis = new List<Broccoli>();
             this.LoadContent(contentManager);
+        }
+
+        protected GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        {
+            GraphicsDevice = graphicsDevice;
+            SpriteBatch = spriteBatch;
         }
 
         /// <summary>
@@ -45,7 +54,10 @@ namespace BCS_3
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public abstract void Update(GameTime gameTime);
+        public virtual void Update(GameTime gameTime)
+        {
+            
+        }
 
         /// <summary>
         /// This is called when the game should draw itself.
