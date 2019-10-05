@@ -44,6 +44,7 @@
   <ItemGroup>
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />
+    <Compile Include="VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="Program.cs" />
@@ -113,6 +114,10 @@
   <ItemGroup>
     <Folder Include="Content\Mason\" />
     <Folder Include="Mason\" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <Content Include="Content\corey\rectangleBase.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />
