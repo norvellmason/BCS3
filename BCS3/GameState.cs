@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -14,18 +15,18 @@ namespace BCS_3
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
 
-        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
-            this.LoadContent();
+            this.LoadContent(contentManager);
         }
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected virtual void LoadContent()
+        protected virtual void LoadContent(ContentManager contentManager)
         {
             // load your content here
         }
