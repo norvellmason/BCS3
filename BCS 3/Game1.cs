@@ -11,7 +11,6 @@ namespace BCS_3
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        GameState CurrentGameState;
         
         public Game1()
         {
@@ -41,7 +40,6 @@ namespace BCS_3
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            this.CurrentGameState = new TestGame(graphics.GraphicsDevice, spriteBatch);
 
             // TODO: use this.Content to load your game content here
         }
@@ -62,7 +60,10 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Update(GameTime gameTime)
         {
-            this.CurrentGameState.Update(gameTime);
+            if (StateManager.GetCurrentGameState() != null)
+            {
+                StateManager.GetCurrentGameState().Update(gameTime);
+            }
 
             base.Update(gameTime);
         }
@@ -73,7 +74,10 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         protected override void Draw(GameTime gameTime)
         {
-            this.CurrentGameState.Draw(gameTime);
+            if (StateManager.GetCurrentGameState() != null)
+            {
+                StateManager.GetCurrentGameState().Draw(gameTime);
+            }
 
             base.Draw(gameTime);
         }

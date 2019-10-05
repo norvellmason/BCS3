@@ -21,23 +21,12 @@ namespace BCS_3
         }
 
         /// <summary>
-        /// Allows the game to perform any initialization it needs to before starting to run.
-        /// This is where it can query for any required services and load any non-graphic
-        /// related content.  Calling base.Initialize will enumerate through any components
-        /// and initialize them as well.
-        /// </summary>
-        protected virtual void Initialize()
-        {
-            // TODO: Add your initialization logic here
-        }
-
-        /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
         protected virtual void LoadContent()
         {
-            // TODO: use this.Content to load your game content here
+            
         }
 
         /// <summary>
@@ -46,7 +35,7 @@ namespace BCS_3
         /// </summary>
         protected virtual void UnloadContent()
         {
-            // TODO: Unload any non ContentManager content here
+            
         }
 
         /// <summary>
@@ -56,7 +45,7 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public virtual void Update(GameTime gameTime)
         {
-            // TODO: Add your update logic here
+            
         }
 
         /// <summary>
@@ -65,7 +54,7 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public virtual void Draw(GameTime gameTime)
         {
-            // TODO: Add your drawing code here
+            
         }
     }
 }
