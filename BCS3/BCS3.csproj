@@ -43,6 +43,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
+    <Compile Include="Keenan\Broccoli.cs" />
+    <Compile Include="Keenan\Child.cs" />
+    <Compile Include="Keenan\Demon.cs" />
+    <Compile Include="Keenan\SlingShot.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />
     <Compile Include="Corey\VisualNovelState.cs" />
