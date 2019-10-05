@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -9,27 +10,34 @@ using System.Threading.Tasks;
 
 namespace BCS_3
 {
-    abstract class GameState
+    public abstract class GameState
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
         private List<Broccoli> broccolis;
 
-        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
             this.LoadContent();
             this.broccolis = new List<Broccoli>();
+            this.LoadContent(contentManager);
+        }
+
+        protected GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        {
+            GraphicsDevice = graphicsDevice;
+            SpriteBatch = spriteBatch;
         }
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected virtual void LoadContent()
+        protected virtual void LoadContent(ContentManager contentManager)
         {
-            
+            // load your content here
         }
 
         /// <summary>
@@ -38,7 +46,7 @@ namespace BCS_3
         /// </summary>
         protected virtual void UnloadContent()
         {
-            
+            // unload your content here
         }
 
         /// <summary>
@@ -48,28 +56,13 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public virtual void Update(GameTime gameTime)
         {
-
-            // TODO add a check to see if the face is at this location
-
-            for(int index = 0; index < broccolis.Count; index++)
-            {
-                broccolis[index].update();
-                if (broccolis[index].isOutOfBounds)
-                {
-                    Console.WriteLine("Missed Broccoli");
-                    broccolis.RemoveAt(index);
-                    index--;
-                }
-            }
+            
         }
 
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public virtual void Draw(GameTime gameTime)
-        {
-            
-        }
+        public abstract void Draw(GameTime gameTime);
     }
 }

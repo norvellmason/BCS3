@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 
 namespace BCS_3
@@ -22,7 +23,7 @@ namespace BCS_3
 
         Rectangle boxRect = new Rectangle(0, 0, 1280, 250);
 
-        public VisualNovelState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch) : base(graphicsDevice, spriteBatch)
+        public VisualNovelState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager) : base(graphicsDevice, spriteBatch, contentManager)
         {
             this.screenHeight = graphicsDevice.Viewport.Height;
             this.screenWidth = graphicsDevice.Viewport.Width;
@@ -39,13 +40,12 @@ namespace BCS_3
 
         public override void Update(GameTime gameTime)
         {
-            SpriteBatch.Draw(dialogueBox); 
-            base.Update(gameTime);
+
         }
 
-        protected override void LoadContent()
+        protected override void LoadContent(ContentManager contentManager)
         {
-            base.LoadContent();
+
         }
 
         protected override void UnloadContent()
