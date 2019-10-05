@@ -14,21 +14,12 @@ namespace BCS_3
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
-        private List<Broccoli> broccolis;
 
         public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
-            this.LoadContent();
-            this.broccolis = new List<Broccoli>();
             this.LoadContent(contentManager);
-        }
-
-        protected GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
-        {
-            GraphicsDevice = graphicsDevice;
-            SpriteBatch = spriteBatch;
         }
 
         /// <summary>
