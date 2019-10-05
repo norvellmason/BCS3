@@ -20,7 +20,6 @@ namespace BCS_3
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
-            this.LoadContent();
             this.broccolis = new List<Broccoli>();
             this.LoadContent(contentManager);
         }
