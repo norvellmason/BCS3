@@ -51,7 +51,10 @@ namespace BCS_3
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public abstract void Update(GameTime gameTime);
+        public virtual void Update(GameTime gameTime)
+        {
+            
+        }
 
         /// <summary>
         /// This is called when the game should draw itself.

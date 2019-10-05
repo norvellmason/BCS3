@@ -47,6 +47,7 @@
     <Compile Include="Corey\VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="JonsGame\JonsGameState.cs" />
     <Compile Include="Keenan\ArcadeBroccoliShooter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -112,6 +113,9 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Jon\" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Keenan\" />
