@@ -13,12 +13,14 @@ namespace BCS_3
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
+        private List<Broccoli> broccolis;
 
         public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
             this.LoadContent();
+            this.broccolis = new List<Broccoli>();
         }
 
         /// <summary>
@@ -46,7 +48,19 @@ namespace BCS_3
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
         public virtual void Update(GameTime gameTime)
         {
-            
+
+            // TODO add a check to see if the face is at this location
+
+            for(int index = 0; index < broccolis.Count; index++)
+            {
+                broccolis[index].update();
+                if (broccolis[index].isOutOfBounds)
+                {
+                    Console.WriteLine("Missed Broccoli");
+                    broccolis.RemoveAt(index);
+                    index--;
+                }
+            }
         }
 
         /// <summary>
