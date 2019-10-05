@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace BCS_3
 {
-    abstract class GameState
+    public abstract class GameState
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
@@ -27,7 +27,7 @@ namespace BCS_3
         /// </summary>
         protected virtual void LoadContent()
         {
-            
+            // load your content here
         }
 
         /// <summary>
@@ -36,7 +36,7 @@ namespace BCS_3
         /// </summary>
         protected virtual void UnloadContent()
         {
-            
+            // unload your content here
         }
 
         /// <summary>
@@ -44,18 +44,12 @@ namespace BCS_3
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public virtual void Update(GameTime gameTime)
-        {
-            
-        }
+        public abstract void Update(GameTime gameTime);
 
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public virtual void Draw(GameTime gameTime)
-        {
-            
-        }
+        public abstract void Draw(GameTime gameTime);
     }
 }
