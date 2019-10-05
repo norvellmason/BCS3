@@ -1,4 +1,5 @@
 ﻿using Microsoft.Xna.Framework;
+using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -9,25 +10,25 @@ using System.Threading.Tasks;
 
 namespace BCS_3
 {
-    abstract class GameState
+    public abstract class GameState
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
 
-        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
+        public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
-            this.LoadContent();
+            this.LoadContent(contentManager);
         }
 
         /// <summary>
         /// LoadContent will be called once per game and is the place to load
         /// all of your content.
         /// </summary>
-        protected virtual void LoadContent()
+        protected virtual void LoadContent(ContentManager contentManager)
         {
-            
+            // load your content here
         }
 
         /// <summary>
@@ -36,7 +37,7 @@ namespace BCS_3
         /// </summary>
         protected virtual void UnloadContent()
         {
-            
+            // unload your content here
         }
 
         /// <summary>
@@ -44,18 +45,12 @@ namespace BCS_3
         /// checking for collisions, gathering input, and playing audio.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public virtual void Update(GameTime gameTime)
-        {
-            
-        }
+        public abstract void Update(GameTime gameTime);
 
         /// <summary>
         /// This is called when the game should draw itself.
         /// </summary>
         /// <param name="gameTime">Provides a snapshot of timing values.</param>
-        public virtual void Draw(GameTime gameTime)
-        {
-            
-        }
+        public abstract void Draw(GameTime gameTime);
     }
 }

@@ -42,6 +42,9 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="BroccoliGravitar.cs" />
+    <Compile Include="Examples\TestState.cs" />
+    <Compile Include="Broccoli.cs" />
     <Compile Include="VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
@@ -107,6 +110,10 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Content\Mason\" />
+    <Folder Include="Mason\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
