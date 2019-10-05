@@ -42,7 +42,7 @@
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
-    <Compile Include="BroccoliGravitar.cs" />
+    <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Examples\TestState.cs" />
     <Compile Include="Broccoli.cs" />
     <Compile Include="Game1.cs" />
@@ -50,6 +50,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateManager.cs" />
+    <Compile Include="Zak\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="MonoGame.Framework">
