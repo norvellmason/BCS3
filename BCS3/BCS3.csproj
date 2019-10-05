@@ -45,7 +45,7 @@
     <Compile Include="BroccoliGravitar.cs" />
     <Compile Include="Examples\TestState.cs" />
     <Compile Include="Broccoli.cs" />
-    <Compile Include="VisualNovelState.cs" />
+    <Compile Include="Corey\VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
     <Compile Include="Program.cs" />
