@@ -115,7 +115,7 @@ namespace BCS_3.JonsGame
         {
             // load your content here
             this.broccImage = contentManager.Load<Texture2D>("Jon/broccoli");
-            this.eaterImage = contentManager.Load<Texture2D>("Jon/face");
+            this.eaterImage = contentManager.Load<Texture2D>("Jon/BCBoy");
             this.myFont = contentManager.Load<SpriteFont>("Jon/myFont");
 
             this.donutImage = contentManager.Load<Texture2D>("Jon/donut");

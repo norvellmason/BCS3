@@ -5,6 +5,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace BCS_3
 {
@@ -13,6 +14,8 @@ namespace BCS_3
         Color bcsBlue = new Color(174, 225, 243);
         Color bcsOrange = new Color(246, 138, 39);
         Color bcsWhite = Color.White;
+
+        string scriptName; 
 
         bool firstTime = true;
         bool char1Disp = true;
@@ -23,7 +26,7 @@ namespace BCS_3
 
         int screenHeight;
         int screenWidth;
-        int dialogueCount = 7;
+        int dialogueCount = 8;
 
         string currentSpeaker = "";
         string currentDialogue1 = "";
@@ -45,6 +48,7 @@ namespace BCS_3
         Vector2 boxLine2Pos;
 
         Dictionary<string, Texture2D> textures = new Dictionary<string, Texture2D>();
+        Dictionary<string, Song> songs = new Dictionary<string, Song>(); 
 
         Texture2D currentBackground; 
         Texture2D currentCharacter1;
@@ -53,10 +57,14 @@ namespace BCS_3
         SpriteFont nameFont;
         SpriteFont speakFont; 
 
-        public VisualNovelState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager) : base(graphicsDevice, spriteBatch, contentManager)
+        public VisualNovelState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager, string scriptName) : base(graphicsDevice, spriteBatch, contentManager)
         {
             this.screenHeight = graphicsDevice.Viewport.Height;
             this.screenWidth = graphicsDevice.Viewport.Width;
+
+            this.scriptName = scriptName;
+
+            this.visualNovelLines = File.ReadAllLines("Corey/scripts/" + this.scriptName);
 
             this.dialogueBox = new Rectangle(0, (int)(this.screenHeight * (75f / 100f)), this.screenWidth, this.screenHeight / 4);
             this.char1Pos = new Rectangle((int)(this.screenWidth * .05), (int)(this.screenHeight * .12), (int)(this.screenWidth * .2), (int)(this.screenHeight * .65));
@@ -115,10 +123,13 @@ namespace BCS_3
 
             if(this.firstTime)
             {
+                string songName = this.visualNovelLines[1].Trim(); 
+                string firstBackground = this.visualNovelLines[3].Trim(); 
+                string[] firstChracters = this.visualNovelLines[5].Trim().Split('&');
+                string[] firstDialogue = this.visualNovelLines[7].Trim().Split('&');
 
-                string firstBackground = this.visualNovelLines[1].Trim(); 
-                string[] firstChracters = this.visualNovelLines[3].Trim().Split('&');
-                string[] firstDialogue = this.visualNovelLines[5].Trim().Split('&');
+                MediaPlayer.Play(this.songs[songName]);
+                MediaPlayer.IsRepeating = true; 
 
                 this.currentBackground = textures[firstBackground];
 
@@ -135,7 +146,7 @@ namespace BCS_3
                     this.char1Disp = true;
                     this.currentCharacter1 = this.textures[char1];
 
-                    if (char1 == "steelBeamBoy" || char1 == "samsung") this.char1Wide = true;
+                    if (char1 == "steelBeamBoy" || char1 == "samsung" || char1 == "cancerInstallationMan") this.char1Wide = true;
                     else this.char1Wide = false; 
                 }
 
@@ -149,7 +160,7 @@ namespace BCS_3
                     this.char2Disp = true; 
                     this.currentCharacter2 = this.textures[char2];
 
-                    if (char2 == "steelBeamBoy" || char2 == "samsung") this.char2Wide = true;
+                    if (char2 == "steelBeamBoy" || char2 == "samsung" || char2 == "cancerInstallationMan") this.char2Wide = true;
                     else this.char2Wide = false; 
                 }
 
@@ -166,7 +177,16 @@ namespace BCS_3
 
             if(keyboardState.IsKeyDown(Keys.Space) && oldKeyboardState.IsKeyUp(Keys.Space))
             {
-                if(this.visualNovelLines[this.dialogueCount].Trim() == "BACKGROUND")
+                if (this.visualNovelLines[this.dialogueCount].Trim() == "SONG")
+                {
+                    this.dialogueCount++;
+                    MediaPlayer.Stop();
+                    MediaPlayer.Play(this.songs[this.visualNovelLines[this.dialogueCount].Trim()]);
+                    MediaPlayer.IsRepeating = true; 
+                    this.dialogueCount++;
+                }
+
+                if (this.visualNovelLines[this.dialogueCount].Trim() == "BACKGROUND")
                 {
                     this.dialogueCount++;
                     this.currentBackground = this.textures[this.visualNovelLines[this.dialogueCount].Trim()];
@@ -194,7 +214,7 @@ namespace BCS_3
                         this.char1Disp = true;
                         this.currentCharacter1 = this.textures[char1];
 
-                        if (char1 == "steelBeamBoy" || char1 == "samsung") this.char1Wide = true;
+                        if (char1 == "steelBeamBoy" || char1 == "samsung" || char1 == "cancerInstallationMan") this.char1Wide = true;
                         else this.char1Wide = false;
                     }
 
@@ -208,7 +228,7 @@ namespace BCS_3
                         this.char2Disp = true;
                         this.currentCharacter2 = this.textures[char2];
 
-                        if (char2 == "steelBeamBoy" || char2 == "samsung") this.char2Wide = true;
+                        if (char2 == "steelBeamBoy" || char2 == "samsung" || char2 == "cancerInstallationMan") this.char2Wide = true;
                         else this.char2Wide = false;
                     }
 
@@ -261,14 +281,13 @@ namespace BCS_3
             this.textures["villager"] = contentManager.Load<Texture2D>("corey/characters/villager");
             this.textures["steelBeamBoy"] = contentManager.Load<Texture2D>("corey/characters/steelBeamBoy");
             this.textures["samsung"] = contentManager.Load<Texture2D>("corey/characters/samsung");
+            this.textures["bcsBoy"] = contentManager.Load<Texture2D>("corey/characters/bcsBoy");
+            this.textures["cancerInstallationMan"] = contentManager.Load<Texture2D>("corey/characters/cancerInstallationMan");
 
+            this.songs["darkAndGritty"] = contentManager.Load<Song>("corey/music/fight"); 
 
             this.speakFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont");
             this.nameFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont2");
-
-            this.visualNovelLines = File.ReadAllLines("Corey/scripts/introVisualNovel.txt");
-
-            Console.WriteLine(this.visualNovelLines[0]);
         }
 
         protected override void UnloadContent()
