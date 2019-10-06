@@ -135,8 +135,9 @@ namespace BCS_3.JonsGame
             {
                 StateManager.AdvanceGameState();
             }
+
             base.Update(gameTime);
-            int decider = rng.Next(0, 750);
+            int decider = rng.Next(0, 1000);
             if (decider < 40)
             {
                 if (decider < 10)
@@ -202,7 +203,7 @@ namespace BCS_3.JonsGame
 
             
             
-            this.hasWon = this.player.Weight < 2;
+            this.hasWon = this.player.Weight < 4;
             this.hasLost = this.player.Weight > 50;
 
 
