@@ -254,7 +254,13 @@ namespace BCS_3
             Console.WriteLine(numberOfBroccoli);
 
             if (numberOfBroccoli <= 0 && !newRound)
-                done = true;                        
+                done = true;
+
+            if (done && timer > 80)
+                StateManager.AdvanceGameState();
+            else
+                timer++;
+
         }
     }
 }
