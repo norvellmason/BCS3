@@ -10,23 +10,21 @@ namespace BCS_3.Zak
 {
     public class Polygon
     {
-        public Vector2 Position;
-        public float Rotation = 0;
-
         public List<Vector2> Points;
-        
-        public Polygon(Vector2 position, params Vector2[] points)
+
+        public bool Closed { get; set; } = true;
+
+        public Polygon(params Vector2[] points)
         {
-            Position = position;
             Points = new List<Vector2>(points);
         }
 
-        public Vector2 PointAt(int index)
+        public Vector2 PointAt(int index, float angle)
         {
-            float x = (float)(Math.Cos(Rotation) * Points[index].X + Math.Sin(Rotation) * Points[index].Y);
-            float y = (float)(Math.Cos(Rotation) * Points[index].Y - Math.Sin(Rotation) * Points[index].X);
+            float x = (float)(Math.Cos(angle) * Points[index].X + Math.Sin(angle) * Points[index].Y);
+            float y = (float)(Math.Cos(angle) * Points[index].Y - Math.Sin(angle) * Points[index].X);
 
-            return Position + new Vector2(x, y);
+            return new Vector2(x, y);
         }
         
         /// <summary>
@@ -35,21 +33,22 @@ namespace BCS_3.Zak
         /// <param name="points">the vertices of polygon</param>
         /// <param name="testPoint">the given point</param>
         /// <returns>true if the point is inside the polygon; otherwise, false</returns>
-        public bool ContainsPoint(Vector2 testPoint)
+        public bool ContainsPoint(Vector2 position, float angle, Vector2 testPoint)
         {
             bool result = false;
             int j = Points.Count - 1;
             for (int i = 0; i < Points.Count; i++)
             {
-                if (PointAt(i).Y < testPoint.Y && PointAt(j).Y >= testPoint.Y || PointAt(j).Y < testPoint.Y && PointAt(i).Y >= testPoint.Y)
+                if((position + PointAt(i, angle)).Y < testPoint.Y && (position + PointAt(j, angle)).Y >= testPoint.Y || (position + PointAt(j, angle)).Y < testPoint.Y && (position + PointAt(i, angle)).Y >= testPoint.Y)
                 {
-                    if (PointAt(i).X + (testPoint.Y - PointAt(i).Y) / (PointAt(j).Y - PointAt(i).Y) * (PointAt(j).X - PointAt(i).X) < testPoint.X)
+                    if ((position + PointAt(i, angle)).X + (testPoint.Y - (position + PointAt(i, angle)).Y) / ((position + PointAt(j, angle)).Y - (position + PointAt(i, angle)).Y) * ((position + PointAt(j, angle)).X - (position + PointAt(i, angle)).X) < testPoint.X)
                     {
                         result = !result;
                     }
                 }
                 j = i;
             }
+
             return result;
         }
     }

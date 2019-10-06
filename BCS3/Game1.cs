@@ -2,8 +2,6 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using BCS_3.Zak;
-
 namespace BCS_3
 {
     /// <summary>
@@ -13,14 +11,14 @@ namespace BCS_3
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this)
             {
                 PreferredBackBufferWidth = 1600,
                 PreferredBackBufferHeight = 900
-            };
+            }; 
 
             Content.RootDirectory = "Content";
         }
@@ -35,7 +33,9 @@ namespace BCS_3
         {
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            StateManager.SetGameState(new Mason.BroccoliAsteroidsGameState(graphics.GraphicsDevice, spriteBatch, Content));
+
+            StateManager.SetGameState(new VisualNovelState(this.GraphicsDevice, this.spriteBatch, this.Content)); 
+            
 
             base.Initialize();
         }
@@ -46,7 +46,7 @@ namespace BCS_3
         /// </summary>
         protected override void LoadContent()
         {
-            // Create a new SpriteBatch, which can be used to draw textures.
+            // Create a new SpriteBatch, which can be used to draw textures
 
             // TODO: use this.Content to load your game content here
         }
