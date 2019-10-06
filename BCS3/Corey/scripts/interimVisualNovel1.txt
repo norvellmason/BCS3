@@ -1,5 +1,5 @@
 SONG
-    darkAndGritty
+    spaceJazz
 BACKGROUND
     dayVillage
 CHARACTERS

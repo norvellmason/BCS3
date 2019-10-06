@@ -112,11 +112,14 @@ namespace BCS_3.Zak
         private void SpawnPlayer()
         {
             float angle = (float)random.NextDouble() * 2 * (float)Math.PI;
-            float x = (float)Math.Cos(angle) * 800.0f;
-            float y = (float)Math.Sin(angle) * 800.0f;
+            if (level.HasPlatform)
+                angle = planets[0].Angle + (float)Math.PI + (float)(random.NextDouble() - 0.5f) * 0.2f;
+
+            float x = (float)Math.Cos(angle) * 600.0f;
+            float y = (float)Math.Sin(angle) * 600.0f;
 
             player.Alive = true;
-            player.Position = new Vector2(x, y);
+            player.Position = new Vector2(x, -y);
             player.Velocity = new Vector2(0, 0);
 
             foreach (GravitarEnemy enemy in enemies)
@@ -125,8 +128,10 @@ namespace BCS_3.Zak
 
         private void NextLevel()
         {
-            level.NextLevel();
+            if (level.Number == level.LastLevel)
+                StateManager.AdvanceGameState();
 
+            level.NextLevel();
             planets.Clear();
 
             planets.Add(new Planet(Vector2.Zero, GetPlanetPolygon()) { Angle = (float)Utils.random.NextDouble() * 2 * (float)Math.PI });
@@ -338,10 +343,10 @@ namespace BCS_3.Zak
 
                         Vector2 targetPosition = player.Position;
                         if (cruiser.Type == CruiserType.Dreadnaught)
-                            targetPosition += player.Velocity * playerOffset.Length() / 300.0f * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                            targetPosition = player.Position + player.Velocity * (playerOffset.Length() / 300.0f);
 
-                        bullets.Add(new GravitarBullet(cruiser.Position, Vector2.Normalize(targetPosition - cruiser.Position) * 700, false));
-                        cruiser.FiringTimer = cruiser.FiringDelay + (float)random.NextDouble() * 0.3f;
+                        bullets.Add(new GravitarBullet(cruiser.Position, Vector2.Normalize(targetPosition - cruiser.Position) * 300, false));
+                        cruiser.FiringTimer = cruiser.FiringDelay + (float)random.NextDouble();
                         shoot.Play();
                     }
                 }
@@ -368,7 +373,7 @@ namespace BCS_3.Zak
                     switch(enemy.Type) {
                         case EnemyType.Standard:
                             bullets.Add(new GravitarBullet(enemy.Position, Vector2.Normalize(player.Position - enemy.Position) * 300, false));
-                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble() * 0.3f;
+                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble();
                             shoot.Play();
 
                             break;
@@ -376,21 +381,21 @@ namespace BCS_3.Zak
                         case EnemyType.SungBrute:
                             float angle = Utils.AngleOf(player.Position - enemy.Position);
 
-                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle - 0.15f, 300), false));
+                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle - 0.2f, 300), false));
                             bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle, 300), false));
-                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle + 0.15f, 300), false));
+                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle + 0.2f, 300), false));
 
-                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble() * 0.3f;
+                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble();
                             bigShoot.Play();
 
                             break;
 
                         case EnemyType.Queen:
                             Vector2 playerOffset = player.Position - enemy.Position;
-                            Vector2 targetPosition = player.Position + player.Velocity * playerOffset.Length() / 300.0f * (float)gameTime.ElapsedGameTime.TotalSeconds;
+                            Vector2 targetPosition = player.Position + player.Velocity * (playerOffset.Length() / 300.0f);
                             bullets.Add(new GravitarBullet(enemy.Position, Vector2.Normalize(targetPosition - enemy.Position) * 300, false));
 
-                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble() * 0.3f;
+                            enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble();
                             shoot.Play();
 
                             break;
@@ -454,7 +459,7 @@ namespace BCS_3.Zak
 
                 if (player.Firing && player.firingTimer <= 0)
                 {
-                    bullets.Add(new GravitarBullet(player.Position + Utils.VectorFrom(player.Angle, 20), player.Velocity + Utils.VectorFrom(player.Angle, 400), true));
+                    bullets.Add(new GravitarBullet(player.Position + Utils.VectorFrom(player.Angle, 20), player.Velocity + Utils.VectorFrom(player.Angle, 350), true));
                     player.firingTimer = player.firingDelay;
 
                     shoot.Play();
@@ -532,7 +537,7 @@ namespace BCS_3.Zak
 
             SpriteBatch.Begin(transformMatrix: Matrix.CreateScale(scale) * Matrix.CreateTranslation(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2, 0));
 
-            foreach(Planet planet in planets)
+            foreach (Planet planet in planets)
                 DrawPolygon(SpriteBatch, planet.Polygon, planet.Position, planet.Angle, 1.0f, Color.Blue);
 
             if(OnScreen(player.Position, SpriteBatch.GraphicsDevice.Viewport, screenMargin))
