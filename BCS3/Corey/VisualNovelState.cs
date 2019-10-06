@@ -26,7 +26,7 @@ namespace BCS_3
 
         int screenHeight;
         int screenWidth;
-        int dialogueCount = 8;
+        int dialogueCount = 9;
 
         string currentSpeaker = "";
         string currentDialogue1 = "";
@@ -242,7 +242,7 @@ namespace BCS_3
                     string[] currentLine = visualNovelLines[this.dialogueCount].Split('&');
                     this.currentSpeaker = currentLine[0].Trim();
                     this.currentDialogue1 = currentLine[1].Trim();
-                    this.currentDialogue2 = currentLine[2].Trim();
+                      this.currentDialogue2 = currentLine[2].Trim();
 
                     this.dialogueCount++; 
                 }
@@ -285,6 +285,9 @@ namespace BCS_3
             this.textures["cancerInstallationMan"] = contentManager.Load<Texture2D>("corey/characters/cancerInstallationMan");
 
             this.songs["darkAndGritty"] = contentManager.Load<Song>("corey/music/fight");
+            this.songs["wildFires"] = contentManager.Load<Song>("corey/music/wildFires");
+            this.songs["rage"] = contentManager.Load<Song>("corey/music/rage");
+            this.songs["spaceJazz"] = contentManager.Load<Song>("corey/music/spaceJazz");
 
             this.speakFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont");
             this.nameFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont2");

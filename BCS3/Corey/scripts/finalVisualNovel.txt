@@ -1,5 +1,5 @@
 SONG
-    darkAndGritty
+    wildFires
 BACKGROUND
     ruinedWorld
 CHARACTERS
