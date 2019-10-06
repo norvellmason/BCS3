@@ -35,7 +35,7 @@ namespace BCS_3
         {
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            StateManager.SetGameState(new JonsGame.JonsGameState(graphics.GraphicsDevice, spriteBatch, Content));
+            StateManager.SetGameState(new JonsGame.JonsGameState(graphics.GraphicsDevice, spriteBatch, Content, 900,  1600));
 
             base.Initialize();
         }
