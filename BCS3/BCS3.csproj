@@ -47,6 +47,7 @@
     <Compile Include="Keenan\Child.cs" />
     <Compile Include="Keenan\Demon.cs" />
     <Compile Include="Keenan\SlingShot.cs" />
+    <Compile Include="Mason\ParticleEngine.cs" />
     <Compile Include="Mason\RaceCar.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />
