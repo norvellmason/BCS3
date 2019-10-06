@@ -3,7 +3,7 @@
 
 /outputDir:bin
 /intermediateDir:obj
-/platform:Windows
+/platform:DesktopGL
 /config:
 /profile:Reach
 /compress:False
@@ -61,14 +61,6 @@
 /processorParam:TextureFormat=Color
 /build:corey/backgrounds/home.jpg
 
-#begin Keenan/File.spritefont
-/importer:FontDescriptionImporter
-/processor:FontDescriptionProcessor
-/processorParam:PremultiplyAlpha=True
-/processorParam:TextureFormat=Compressed
-/build:Keenan/File.spritefont
-
-#begin Keenan/solid.png
 #begin corey/backgrounds/nightVillage.jpg
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -80,10 +72,8 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:corey/backgrounds/nightVillage.jpg
-/build:Keenan/solid.png
 
 #begin corey/backgrounds/rectangleBase.png
-#begin Keenan/trash.png
 /importer:TextureImporter
 /processor:TextureProcessor
 /processorParam:ColorKeyColor=255,0,255,255
@@ -94,7 +84,6 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:corey/backgrounds/rectangleBase.png
-/build:Keenan/trash.png
 
 #begin corey/backgrounds/ruinedWorld.jpg
 /importer:TextureImporter
@@ -168,6 +157,18 @@
 /processorParam:TextureFormat=Color
 /build:corey/characters/bcman_done.png
 
+#begin corey/characters/bcsBoy.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:corey/characters/bcsBoy.png
+
 #begin corey/characters/broccoli.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -191,6 +192,18 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:corey/characters/broccoli_children.png
+
+#begin corey/characters/cancerInstallationMan.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:corey/characters/cancerInstallationMan.png
 
 #begin corey/characters/noveltryMan.png
 /importer:TextureImporter
@@ -290,6 +303,30 @@
 /processorParam:TextureFormat=Compressed
 /build:corey/fonts/bcsFont2.spritefont
 
+#begin corey/music/default.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Medium
+/build:corey/music/default.mp3
+
+#begin corey/music/fight.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:corey/music/fight.mp3
+
+#begin corey/music/notFight.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:corey/music/notFight.mp3
+
+#begin corey/music/test.wma
+/importer:WmaImporter
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:corey/music/test.wma
+
 #begin Jon/BCBoy.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -302,19 +339,6 @@
 /processorParam:TextureFormat=Color
 /build:Jon/BCBoy.png
 
-#begin corey/characters/bcsBoy.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:corey/characters/bcsBoy.png
-
-#begin corey/characters/broccoli.png
 #begin Jon/broccoli.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -339,19 +363,6 @@
 /processorParam:TextureFormat=Color
 /build:Jon/cookie.png
 
-#begin corey/characters/cancerInstallationMan.png
-/importer:TextureImporter
-/processor:TextureProcessor
-/processorParam:ColorKeyColor=255,0,255,255
-/processorParam:ColorKeyEnabled=True
-/processorParam:GenerateMipmaps=False
-/processorParam:PremultiplyAlpha=True
-/processorParam:ResizeToPowerOfTwo=False
-/processorParam:MakeSquare=False
-/processorParam:TextureFormat=Color
-/build:corey/characters/cancerInstallationMan.png
-
-#begin corey/characters/noveltryMan.png
 #begin Jon/donut.png
 /importer:TextureImporter
 /processor:TextureProcessor
@@ -406,6 +417,25 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Keenan/crosshair.png
+
+#begin Keenan/File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Keenan/File.spritefont
+
+#begin Keenan/solid.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Keenan/solid.png
 
 #begin Keenan/trash.png
 /importer:TextureImporter
@@ -509,28 +539,4 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Mason/Track3.png
-
-#begin corey/music/default.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Medium
-/build:corey/music/default.mp3
-
-#begin corey/music/fight.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:corey/music/fight.mp3
-
-#begin corey/music/notFight.mp3
-/importer:Mp3Importer
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:corey/music/notFight.mp3
-
-#begin corey/music/test.wma
-/importer:WmaImporter
-/processor:SongProcessor
-/processorParam:Quality=Best
-/build:corey/music/test.wma
 
