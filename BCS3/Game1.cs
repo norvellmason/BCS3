@@ -2,7 +2,7 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
-using BCS_3.JonsGame;
+using BCS_3.Zak;
 
 namespace BCS_3
 {
@@ -16,10 +16,13 @@ namespace BCS_3
         
         public Game1()
         {
-            graphics = new GraphicsDeviceManager(this);
+            graphics = new GraphicsDeviceManager(this)
+            {
+                PreferredBackBufferWidth = 1600,
+                PreferredBackBufferHeight = 900
+            };
+
             Content.RootDirectory = "Content";
-            graphics.PreferredBackBufferWidth = 1920;
-            graphics.PreferredBackBufferHeight = 1080;
         }
 
         /// <summary>
@@ -31,11 +34,10 @@ namespace BCS_3
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
-            
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            StateManager.SetGameState(new ArcadeBroccoliShooter(graphics.GraphicsDevice, spriteBatch, Content));
 
             base.Initialize();
-            spriteBatch = new SpriteBatch(GraphicsDevice);
-            StateManager.SetGameState(new JonsGameState(graphics.GraphicsDevice, spriteBatch, Content));
         }
 
         /// <summary>

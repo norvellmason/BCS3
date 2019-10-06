@@ -14,20 +14,12 @@ namespace BCS_3
     {
         protected SpriteBatch SpriteBatch;
         protected GraphicsDevice GraphicsDevice;
-        private Texture2D broccImage;
 
         public GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager)
         {
             this.GraphicsDevice = graphicsDevice;
             this.SpriteBatch = spriteBatch;
             this.LoadContent(contentManager);
-            this.LoadContent(contentManager);
-        }
-
-        protected GameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch)
-        {
-            GraphicsDevice = graphicsDevice;
-            SpriteBatch = spriteBatch;
         }
 
         /// <summary>
