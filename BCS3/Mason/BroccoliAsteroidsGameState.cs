@@ -7,6 +7,7 @@ using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Content;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using Microsoft.Xna.Framework.Media;
 
 namespace BCS_3.Mason
 {
@@ -25,8 +26,9 @@ namespace BCS_3.Mason
         private static GraphicsDevice staticGraphicsDevice;
         private static Random random = new Random();
 
-        private float timeRemaining = 60f;
+        private float timeRemaining = 10f;
         private SpriteFont arialFont;
+        private Song racingSong;
 
         private float secondsUntilRespawn = 1f;
 
@@ -39,6 +41,8 @@ namespace BCS_3.Mason
             AdvanceRace();
 
             staticGraphicsDevice = graphicsDevice;
+
+            MediaPlayer.Play(this.racingSong);
         }
 
         protected override void LoadContent(ContentManager contentManager)
@@ -57,6 +61,8 @@ namespace BCS_3.Mason
             this.backgroundTexture = contentManager.Load<Texture2D>("Mason/background");
 
             this.arialFont = contentManager.Load<SpriteFont>("Mason/File");
+
+            this.racingSong = contentManager.Load<Song>("Mason/Subterranean_Monster");
 
             base.LoadContent(contentManager);
         }
@@ -93,7 +99,13 @@ namespace BCS_3.Mason
 
             if (timeRemaining <= 0)
             {
-                //Make player lose
+                this.secondsUntilRespawn = 1f;
+                this.timeRemaining = 60f;
+
+                this.currentTrackIndex = 0;
+                this.currentTrackImageData = new Color[1920 * 1080];
+                this.trackTextures[currentTrackIndex].GetData(this.currentTrackImageData);
+                ResetRace();
             }
 
             base.Update(gameTime);
@@ -190,7 +202,9 @@ namespace BCS_3.Mason
             }
             else
             {
+                MediaPlayer.Stop();
                 //Make player win
+                StateManager.AdvanceGameState();
             }
         }
 

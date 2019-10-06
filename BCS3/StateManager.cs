@@ -9,6 +9,7 @@ namespace BCS_3
     class StateManager
     {
         private static GameState CurrentGameState;
+        private static Queue<GameState> GameStateQueue = new Queue<GameState>();
 
         public StateManager()
         {
@@ -20,9 +21,24 @@ namespace BCS_3
             return StateManager.CurrentGameState;
         }
 
-        public static void SetGameState(GameState gameState)
+        public static void AddGameState(GameState gameState)
         {
-            StateManager.CurrentGameState = gameState;
+            GameStateQueue.Enqueue(gameState);
+
+            if (GameStateQueue.Count == 1)
+            {
+                StateManager.CurrentGameState = gameState;
+            }
+        }
+
+        public static void AdvanceGameState()
+        {
+            if (GameStateQueue.Count > 0)
+            {
+                GameStateQueue.Dequeue();
+
+                CurrentGameState = GameStateQueue.Peek();
+            }
         }
     }
 }
