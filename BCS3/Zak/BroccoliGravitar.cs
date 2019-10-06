@@ -128,8 +128,10 @@ namespace BCS_3.Zak
 
         private void NextLevel()
         {
-            level.NextLevel();
+            if (level.Number == level.LastLevel)
+                StateManager.AdvanceGameState();
 
+            level.NextLevel();
             planets.Clear();
 
             planets.Add(new Planet(Vector2.Zero, GetPlanetPolygon()) { Angle = (float)Utils.random.NextDouble() * 2 * (float)Math.PI });
