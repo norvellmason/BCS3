@@ -234,12 +234,12 @@ namespace BCS_3
         public override void Update(GameTime gameTime)
         {
             //Hide the images after a bit
-            if (timer > 50 && !this.hide)
+            if (timer > 80 && !this.hide)
             {
                 this.hide = true;
                 timer = 0;
             }
-            else
+            else 
             {
                 timer++;
             }
@@ -253,12 +253,15 @@ namespace BCS_3
 
             Console.WriteLine(numberOfBroccoli);
 
-            if (numberOfBroccoli <= 0 && !newRound)
+            if (numberOfBroccoli <= 0 && !newRound && !done)
+            {
                 done = true;
+                timer = 0;
+            }
 
-            if (done && timer > 80)
+            if (done && timer > 100)
                 StateManager.AdvanceGameState();
-            else
+            else if (done && timer < 100)
                 timer++;
 
         }
