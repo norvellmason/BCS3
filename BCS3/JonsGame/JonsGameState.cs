@@ -22,7 +22,7 @@ namespace BCS_3.JonsGame
         Vector2 cookieSize;
         Vector2 donutSize;
         Vector2 eaterSize;
-
+        Vector2 messageLocation;
         Vector2 scoreLocation;
         List<Eatable> eatables;
         Random rng;
@@ -34,22 +34,31 @@ namespace BCS_3.JonsGame
         Texture2D eaterImage;
         Eater player;
 
+        bool hasWon;
+        bool hasLost;
+        bool hasStarted;
 
+        
 
-        public JonsGameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager) : base(graphicsDevice, spriteBatch, contentManager)
+        public JonsGameState(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager, int h, int l) : base(graphicsDevice, spriteBatch, contentManager)
         {
             eatables = new List<Eatable>();
             
             rng = new Random(234234234);
 
-            this.WindowHeight = 1080;
-            this.WindowLength = 1920;
+            this.WindowHeight = h;
+            this.WindowLength = l;
 
             this.scoreLocation = new Vector2(0, 0);
             this.scoreColor = Color.LightGreen;
 
             this.player = new Eater(this.WindowHeight, this.WindowLength, this.eaterSize.X, this.eaterSize.Y);
-          
+
+            this.messageLocation = new Vector2(this.WindowLength / 2, this.WindowHeight / 2);
+
+            this.hasLost = false;
+            this.hasWon = false;
+
         }
 
         public override void Draw(GameTime gameTime)
@@ -58,25 +67,42 @@ namespace BCS_3.JonsGame
 
 
             SpriteBatch.Begin();
-            if (this.player.Weight < 19)
-                SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, this.scoreColor);
-            else if (this.player.Weight < 28)
-                SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, Color.Yellow);
-            else
-                SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, Color.Red);
 
-
-            SpriteBatch.Draw(eaterImage, this.player.position, null, Color.White, this.player.faceDirection, this.eaterSize, this.player.getSize(), SpriteEffects.None, 0);
-            foreach (Eatable element in eatables)
+            if (hasWon)
             {
-                if(element is Broccoli)
-                    SpriteBatch.Draw(broccImage, element.position, null, Color.White, element.rotation, this.broccSize, 0.1f, SpriteEffects.None, 0);
-                else if (element is Donut)
-                    SpriteBatch.Draw(donutImage, element.position, null, Color.White, element.rotation, this.donutSize, .5f, SpriteEffects.None, 0);
-                else if (element is Cookie)
-                    SpriteBatch.Draw(cookieImage, element.position, null, Color.White, element.rotation, this.cookieSize, .5f, SpriteEffects.None, 0);
+                SpriteBatch.DrawString(this.myFont, "You Win!", messageLocation, this.scoreColor);
 
             }
+            else if (hasLost)
+            {
+                SpriteBatch.DrawString(this.myFont, "You Lose!", messageLocation, Color.Red);
+
+            }
+            else
+            {
+
+                if (this.player.Weight < 19)
+                    SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, this.scoreColor);
+                else if (this.player.Weight < 28)
+                    SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, Color.Yellow);
+                else
+                    SpriteBatch.DrawString(this.myFont, "Weight: " + this.player.Weight, scoreLocation, Color.Red);
+
+
+                SpriteBatch.Draw(eaterImage, this.player.position, null, Color.White, this.player.faceDirection, this.eaterSize, this.player.getSize(), SpriteEffects.None, 0);
+                foreach (Eatable element in eatables)
+                {
+                    if (element is Broccoli)
+                        SpriteBatch.Draw(broccImage, element.position, null, Color.White, element.rotation, this.broccSize, 0.1f, SpriteEffects.None, 0);
+                    else if (element is Donut)
+                        SpriteBatch.Draw(donutImage, element.position, null, Color.White, element.rotation, this.donutSize, .5f, SpriteEffects.None, 0);
+                    else if (element is Cookie)
+                        SpriteBatch.Draw(cookieImage, element.position, null, Color.White, element.rotation, this.cookieSize, .5f, SpriteEffects.None, 0);
+
+                }
+            }
+
+
             SpriteBatch.End();
         }
 
@@ -89,7 +115,7 @@ namespace BCS_3.JonsGame
         {
             // load your content here
             this.broccImage = contentManager.Load<Texture2D>("Jon/broccoli");
-            this.eaterImage = contentManager.Load<Texture2D>("Jon/face");
+            this.eaterImage = contentManager.Load<Texture2D>("Jon/BCBoy");
             this.myFont = contentManager.Load<SpriteFont>("Jon/myFont");
 
             this.donutImage = contentManager.Load<Texture2D>("Jon/donut");
@@ -105,6 +131,9 @@ namespace BCS_3.JonsGame
 
         public override void Update(GameTime gameTime)
         {
+            if (hasWon || hasLost)
+                return;
+
             base.Update(gameTime);
             int decider = rng.Next(0, 750);
             if (decider < 40)
@@ -169,6 +198,12 @@ namespace BCS_3.JonsGame
                     index--;
                 }
             }
+
+            
+            
+                this.hasWon = this.player.Weight < 2;
+            this.hasLost = this.player.Weight > 50;
+
 
         }
     }
