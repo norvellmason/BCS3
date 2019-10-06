@@ -121,7 +121,7 @@ namespace BCS_3.JonsGame
 
         public float getSize()
         {
-            return .01f * this.Weight;
+            return .04f * this.Weight;
         }
     }
 }
