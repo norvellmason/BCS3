@@ -46,7 +46,7 @@ namespace BCS_3.Zak
         public void Update(float timePassed)
         {
             if (Thrusting)
-                Velocity += Utils.VectorFrom(Angle, 200) * timePassed;
+                Velocity += Utils.VectorFrom(Angle, 250) * timePassed;
 
             if (TurningLeft)
                 Angle += 3 * timePassed;

@@ -1,0 +1,19 @@
+BACKGROUND
+    ruinedWorld
+CHARACTERS
+    bcsMan & bcsManBloody
+DIALOGUE 
+    Broccoli Consumption Man & H...Help me... & I didn't think I'd die so soon...
+
+DIALOGUE 
+    Samsung & BCS Man... You were a fool. & Now. And when you were alive.
+
+DIALOGUE
+    Club Treasurer MN & Paper Strike!!!!!!!!!!!!!!!!!!!!!!!! & Nnooooooooooo!?!?!?
+
+BACKGROUND
+    farm
+CHARACTERS
+    protag & bcsMan
+DIALOGUE
+    PROTAG & So... We meet again... & Remember me from hit indie game PyQyest? 
