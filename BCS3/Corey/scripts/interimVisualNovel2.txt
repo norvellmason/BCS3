@@ -1,5 +1,5 @@
 SONG
-    darkAndGritty
+    rage
 BACKGROUND
     space
 CHARACTERS
@@ -38,4 +38,4 @@ DIALOGUE
     Protag & Yes, Master. & Anything you wish.
 
 DIALOGUE
-    Protag & BCS Boy... prepare to die.
+    Protag & BCS Boy... prepare to die. & 
