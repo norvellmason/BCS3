@@ -41,14 +41,21 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BCS_3.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="JonsGame\Cookie.cs" />
+    <Compile Include="JonsGame\Donut.cs" />
+    <Compile Include="JonsGame\Eatable.cs" />
+    <Compile Include="JonsGame\Eater.cs" />
     <Compile Include="Keenan\Objects.cs" />
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
     <Compile Include="Keenan\Broccoli_Keenan.cs" />
     <Compile Include="Keenan\Trash.cs" />
     <Compile Include="Mason\RaceCar.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
-    <Compile Include="Broccoli.cs" />
+    <Compile Include="JonsGame\Broccoli.cs" />
     <Compile Include="Corey\VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
@@ -61,6 +68,8 @@
     <Compile Include="Zak\GravitarBroccoli.cs" />
     <Compile Include="Zak\GravitarBullet.cs" />
     <Compile Include="Zak\GravitarPlayer.cs" />
+    <Compile Include="Zak\DemoLevel.cs" />
+    <Compile Include="Zak\Level.cs" />
     <Compile Include="Zak\Particle.cs" />
     <Compile Include="Zak\Planet.cs" />
     <Compile Include="Zak\Polygon.cs" />
@@ -69,10 +78,15 @@
     <Compile Include="Zak\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="FreeImage-dotnet-core, Version=4.3.6.0, Culture=neutral, processorArchitecture=MSIL">
+      <HintPath>..\packages\FreeImage-dotnet-core.4.3.6\lib\net45\FreeImage-dotnet-core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
     <Reference Include="MonoGame.Framework">
       <HintPath>$(MonoGameInstallDirectory)\MonoGame\v3.0\Assemblies\DesktopGL\MonoGame.Framework.dll</HintPath>
     </Reference>
     <Reference Include="System" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
@@ -126,16 +140,53 @@
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </None>
     <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Content\corey\characters\bcman.png" />
+    <None Include="Content\corey\characters\bcman_done.png" />
+    <None Include="Content\corey\characters\broccoli.png" />
+    <None Include="Content\corey\fonts\bcsFont.spritefont" />
+    <None Include="Content\corey\fonts\bcsFont2.spritefont" />
+    <None Include="Content\corey\characters\broccoli_children.png" />
+    <None Include="Content\corey\backgrounds\home.jpg" />
+    <None Include="Content\corey\backgrounds\dayVillage.jpg" />
+    <None Include="Content\corey\backgrounds\nightVillage.jpg" />
+    <None Include="Content\corey\backgrounds\ruinedWorld.jpg" />
+    <None Include="Content\corey\backgrounds\store.jpg" />
+    <None Include="Content\corey\music\default.mp3" />
+    <None Include="Content\corey\music\fight.mp3" />
+    <None Include="Content\corey\music\notFight.mp3" />
+    <None Include="Content\corey\backgrounds\farm.jpg" />
+    <None Include="Content\corey\characters\noveltryMan.png" />
+    <None Include="Content\corey\characters\protag.png" />
+    <None Include="Content\corey\characters\protagBocarina.png" />
+    <None Include="Content\corey\characters\tree.png" />
+    <None Include="Content\corey\characters\villager.png" />
+    <None Include="Content\corey\backgrounds\white.png" />
+    <None Include="Content\corey\backgrounds\space.jpg" />
+    <None Include="Content\corey\characters\steelBeamBoy.png" />
+    <None Include="Content\corey\characters\samsung.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Jon\" />
     <Folder Include="Content\Keenan\" />
     <Folder Include="Content\Mason\" />
+    <Folder Include="Mason\" />
+    <Folder Include="Corey\scripts\" />
+    <Folder Include="Content\corey\backgrounds\" />
+    <Folder Include="Content\corey\characters\" />
+    <Folder Include="Content\corey\music\" />
+    <Folder Include="Content\corey\fonts\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
   <ItemGroup>
-    <Content Include="Content\corey\rectangleBase.png" />
+    <Content Include="Corey\scripts\testScript.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Content\corey\backgrounds\rectangleBase.png" />
+    <Content Include="Corey\scripts\introVisualNovel.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath)\MonoGame\v3.0\MonoGame.Content.Builder.targets" />

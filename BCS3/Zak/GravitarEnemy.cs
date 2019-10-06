@@ -10,6 +10,7 @@ namespace BCS_3.Zak
 {
     public enum EnemyType{
         Standard,
+        SungBrute,
         Queen
     }
 

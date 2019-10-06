@@ -1,0 +1,116 @@
+BACKGROUND
+    ruinedWorld
+CHARACTERS
+   &
+DIALOGUE
+     & Five years ago... Samsung tore apart this world. & Broccoli Consumption Land used to be a paradise...
+
+CHARACTERS 
+    bcsMan & 
+DIALOGUE 
+     & Guarded by Broccoli Consumption Man. &
+
+DIALOGUE
+    & ...He protected all the world's children from cancer. & Made sure they ate their broccoli every day...
+
+DIALOGUE
+    & But even the people with the best intentions sometimes face opposition. &
+
+DIALOGUE
+    & Broccoli Consumption Man had to carry the weight of the world on his shoulders. &
+
+DIALOGUE
+    & Eventually, he lost. & And there was nothing anyone could do to save the world.
+
+CHARACTERS
+    bcsManBloody & 
+DIALOGUE
+    & Because Samsung killed him. &
+
+CHARACTERS
+    bcsManBloody & villager
+DIALOGUE
+    BCS Boy & ...And that man, Broccoli Consumption Man & ...was my father.
+
+DIALOGUE
+    BCS Boy & He died when I was a young age. & I'm not sure I even remember him.
+
+DIALOGUE
+    BCS Boy & But because I'm his son, people expect the world of me. Literally. &
+
+BACKGROUND
+    nothing
+CHARACTERS
+     &
+DIALOGUE
+    BCS Boy & BCS Man was a pillar of society. & Without him, there was a rift.
+
+CHARACTERS
+    villager & 
+DIALOGUE
+    BCS Boy & A rift society expected me to fill. &
+
+DIALOGUE
+    BCS Boy & Truth be told... &
+
+DIALOGUE
+    BCS Boy & I hate this life. &
+
+DIALOGUE
+    BCS Boy & I'm scared to die. &
+
+DIALOGUE
+    BCS Boy & But there's no one else to do the job. & Nobody but me can replace Broccoli Consumption Man. 
+
+CHARACTERS
+    & 
+DIALOGUE
+    & .... & ...........
+
+DIALOGUE
+    & ............... & ..................
+
+DIALOGUE
+    & ..................... & ........................
+
+BACKGROUND
+    space
+CHARACTERS
+    villager & 
+DIALOGUE
+    BCS Boy & Now, Samsung has taken all the broccoli off of & Broccoli Consumption Land and put it into space.
+
+DIALOGUE
+    BCS Boy & The problem is, I have now way to get a space ship. & And Samsung patrols the skies.
+
+DIALOGUE
+    BCS Boy & Luckily, there's one person who has a space ship. & One of Dad's old friends...
+
+BACKGROUND
+    nothing
+CHARACTERS
+    & 
+DIALOGUE
+    & .... & ...........
+
+DIALOGUE
+    & ............... & ..................
+
+DIALOGUE
+    & ..................... & ........................
+
+BACKGROUND
+    dayVillage
+CHARACTERS
+    villager & steelBeamBoy
+DIALOGUE
+    BCS Boy & Steel Beam Boy... & I need your spaceship. To save the broccoli!
+
+DIALOGUE
+    Steel Beam Boy & BCS Boy... I wish that I could give it to you. & BUT YOU'LL NEED TO RACE ME FIRST!
+
+DIALOGUE
+    Steel Beam Boy & It's time to duel! & 
+
+DIALOGUE
+    BCS Boy & Your move! &
