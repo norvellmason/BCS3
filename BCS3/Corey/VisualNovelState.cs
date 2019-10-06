@@ -83,6 +83,8 @@ namespace BCS_3
         {
             SpriteBatch.Begin();
 
+            if (this.firstTime == true) return; 
+
             GraphicsDevice.Clear(Color.Black);
             SpriteBatch.Draw(this.currentBackground, this.bgPos, this.bcsWhite);
             if (this.char1Disp)
@@ -252,7 +254,11 @@ namespace BCS_3
                 if (this.dialogueCount == this.visualNovelLines.Length) this.visualNovelComplete = true; 
             }
 
-            if (this.dialogueCount+1 >= this.visualNovelLines.Length) this.visualNovelComplete = true;
+            if (this.dialogueCount + 1 >= this.visualNovelLines.Length)
+            {
+                MediaPlayer.Stop(); 
+                StateManager.AdvanceGameState(); 
+            }
 
 
             this.oldKeyboardState = keyboardState; 
