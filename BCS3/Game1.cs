@@ -35,7 +35,8 @@ namespace BCS_3
         {
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            StateManager.SetGameState(new ArcadeBroccoliShooter(graphics.GraphicsDevice, spriteBatch, Content));
+            //StateManager.SetGameState(new JonsGame.JonsGameState(graphics.GraphicsDevice, spriteBatch, Content, graphics.GraphicsDevice.Viewport.Height, graphics.GraphicsDevice.Viewport.Width));
+            StateManager.SetGameState(new Mason.BroccoliAsteroidsGameState(graphics.GraphicsDevice, spriteBatch, Content));
 
             base.Initialize();
         }

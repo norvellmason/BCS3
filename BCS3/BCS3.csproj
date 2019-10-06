@@ -52,7 +52,6 @@
     <Compile Include="Keenan\Objects.cs" />
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
     <Compile Include="Keenan\Broccoli_Keenan.cs" />
-    <Compile Include="Keenan\Child.cs" />
     <Compile Include="Mason\ParticleEngine.cs" />
     <Compile Include="Keenan\Trash.cs" />
     <Compile Include="Mason\RaceCar.cs" />
