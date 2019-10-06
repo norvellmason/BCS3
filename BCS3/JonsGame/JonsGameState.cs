@@ -132,8 +132,9 @@ namespace BCS_3.JonsGame
         public override void Update(GameTime gameTime)
         {
             if (hasWon || hasLost)
-                return;
-
+            {
+                StateManager.AdvanceGameState();
+            }
             base.Update(gameTime);
             int decider = rng.Next(0, 750);
             if (decider < 40)
@@ -201,7 +202,7 @@ namespace BCS_3.JonsGame
 
             
             
-                this.hasWon = this.player.Weight < 2;
+            this.hasWon = this.player.Weight < 2;
             this.hasLost = this.player.Weight > 50;
 
 
