@@ -57,7 +57,14 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateManager.cs" />
+    <Compile Include="Zak\GravitarEnemy.cs" />
+    <Compile Include="Zak\GravitarBroccoli.cs" />
+    <Compile Include="Zak\GravitarBullet.cs" />
+    <Compile Include="Zak\GravitarPlayer.cs" />
+    <Compile Include="Zak\Particle.cs" />
+    <Compile Include="Zak\Planet.cs" />
     <Compile Include="Zak\Polygon.cs" />
+    <Compile Include="Zak\Sprites.cs" />
     <Compile Include="Zak\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
