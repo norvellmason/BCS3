@@ -43,10 +43,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
-    <Compile Include="Keenan\Broccoli.cs" />
+    <Compile Include="Keenan\Broccoli_Keenan.cs" />
     <Compile Include="Keenan\Child.cs" />
-    <Compile Include="Keenan\Demon.cs" />
-    <Compile Include="Keenan\SlingShot.cs" />
+    <Compile Include="Keenan\Trash.cs" />
     <Compile Include="Mason\RaceCar.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
     <Compile Include="Broccoli.cs" />

@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 
 namespace BCS_3.Keenan
 {
-    class Child
+    class Trash
     {
-        public Child(Vector2 coordinate, Texture2D image)
+        public Trash(Vector2 coordinate, Texture2D image)
         {
             this.hitbox = new Rectangle(new Point((int)coordinate.X, -40), new Point((int)coordinate.X, 0));
             this.position = coordinate;
