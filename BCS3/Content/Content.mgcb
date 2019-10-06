@@ -61,6 +61,25 @@
 /processorParam:TextureFormat=Color
 /build:Keenan/crosshair.png
 
+#begin Keenan/File.spritefont
+/importer:FontDescriptionImporter
+/processor:FontDescriptionProcessor
+/processorParam:PremultiplyAlpha=True
+/processorParam:TextureFormat=Compressed
+/build:Keenan/File.spritefont
+
+#begin Keenan/solid.png
+/importer:TextureImporter
+/processor:TextureProcessor
+/processorParam:ColorKeyColor=255,0,255,255
+/processorParam:ColorKeyEnabled=True
+/processorParam:GenerateMipmaps=False
+/processorParam:PremultiplyAlpha=True
+/processorParam:ResizeToPowerOfTwo=False
+/processorParam:MakeSquare=False
+/processorParam:TextureFormat=Color
+/build:Keenan/solid.png
+
 #begin Keenan/trash.png
 /importer:TextureImporter
 /processor:TextureProcessor
