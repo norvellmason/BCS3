@@ -1,0 +1,41 @@
+SONG
+    darkAndGritty
+BACKGROUND
+    space
+CHARACTERS
+bcsBoy & cancerInstallationMan
+DIALOGUE
+    Cancer Installation Man & BCS Boy... You know, just like BCS Man I wanted to do good in the world. & I had a family back on Broccoli Consumption Land who succumbed to cancer the day that I left for cullinary school. I never got the chance to tell them that I loved them so now I wanted to get back at the world and to 
+
+DIALOGUE
+    BCS Boy & Okay, bye! &
+
+DIALOGUE
+    & .... & ...........
+
+DIALOGUE
+    & ............... & ..................
+
+DIALOGUE
+    & ..................... & ........................
+
+BACKGROUND
+    ruinedWorld
+CHARACTERS
+    bcsBoy & samsung
+DIALOGUE
+    Samsung & BCS Boy... &
+
+DIALOGUE
+    Samsung & You brought back that broccoli that I sent to space. & But that's the only victory you'll get against me.
+
+DIALOGUE
+    Samsung & Come, my cookie master and fatten BCS Boy to the breaking point! & 
+
+CHARACTERS
+    bcsBoy & protag
+DIALOGUE
+    Protag & Yes, Master. & Anything you wish.
+
+DIALOGUE
+    Protag & BCS Boy... prepare to die.

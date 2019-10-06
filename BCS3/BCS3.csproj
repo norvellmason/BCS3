@@ -163,6 +163,9 @@
     <None Include="Content\corey\backgrounds\space.jpg" />
     <None Include="Content\corey\characters\steelBeamBoy.png" />
     <None Include="Content\corey\characters\samsung.png" />
+    <None Include="Content\corey\music\test.wma" />
+    <None Include="Content\corey\characters\bcsBoy.png" />
+    <None Include="Content\corey\characters\cancerInstallationMan.png" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Content\Jon\" />
@@ -183,6 +186,15 @@
     </Content>
     <Content Include="Content\corey\backgrounds\rectangleBase.png" />
     <Content Include="Corey\scripts\introVisualNovel.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Corey\scripts\interimVisualNovel1.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Corey\scripts\interimVisualNovel2.txt">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Corey\scripts\finalVisualNovel.txt">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
   </ItemGroup>
