@@ -24,7 +24,7 @@ namespace BCS_3.Zak
         public EnemyType Type { get; private set; }
 
         public float firingTimer = 5.0f;
-        public float firingDelay = 2.0f;
+        public float firingDelay = 4.0f;
 
         private Planet parent;
         private int segmentIndex;

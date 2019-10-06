@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using BCS_3.Zak;
+
 namespace BCS_3
 {
     /// <summary>
@@ -16,8 +18,8 @@ namespace BCS_3
         {
             graphics = new GraphicsDeviceManager(this)
             {
-                PreferredBackBufferWidth = 1600,
-                PreferredBackBufferHeight = 900
+                PreferredBackBufferWidth = 1920,
+                PreferredBackBufferHeight = 1080
             }; 
 
             Content.RootDirectory = "Content";
@@ -34,7 +36,7 @@ namespace BCS_3
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            StateManager.SetGameState(new VisualNovelState(this.GraphicsDevice, this.spriteBatch, this.Content)); 
+            StateManager.SetGameState(new BroccoliGravitar(GraphicsDevice, spriteBatch, Content)); 
             
 
             base.Initialize();
