@@ -52,8 +52,6 @@
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
     <Compile Include="Keenan\Broccoli_Keenan.cs" />
     <Compile Include="Keenan\Child.cs" />
-    <Compile Include="Keenan\Demon.cs" />
-    <Compile Include="Keenan\SlingShot.cs" />
     <Compile Include="Mason\ParticleEngine.cs" />
     <Compile Include="Keenan\Trash.cs" />
     <Compile Include="Mason\RaceCar.cs" />
@@ -171,12 +169,6 @@
     <Folder Include="Content\Jon\" />
     <Folder Include="Content\Keenan\" />
     <Folder Include="Content\Mason\" />
-    <Folder Include="Mason\" />
-    <Folder Include="Corey\scripts\" />
-    <Folder Include="Content\corey\backgrounds\" />
-    <Folder Include="Content\corey\characters\" />
-    <Folder Include="Content\corey\music\" />
-    <Folder Include="Content\corey\fonts\" />
   </ItemGroup>
   <ItemGroup />
   <ItemGroup />
