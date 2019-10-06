@@ -1,0 +1,43 @@
+SONG
+    darkAndGritty
+BACKGROUND
+    dayVillage
+CHARACTERS
+    bcsBoy & steelBeamBoy
+DIALOGUE
+    Steel Beam Boy & BCS Boy!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! & !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
+
+DIALOGUE
+    Steel Beam Boy & You make me proud. & And you'd make your dad proud too. 
+
+DIALOGUE
+    BCS Boy & Thanks Steel Beam. & But now that I have the ship, I've got a world to save.
+
+BACKGROUND
+    nothing
+CHARACTERS
+    &
+DIALOGUE
+    & .... & ...........
+
+DIALOGUE
+    & ............... & ..................
+
+DIALOGUE
+    & ..................... & ........................
+
+BACKGROUND
+    space
+CHARACTERS
+bcsBoy & cancerInstallationMan
+DIALOGUE
+    Cancer Installation Man & So BCS Boy... & We finally get the chance to talk.
+
+DIALOGUE
+    BCS Boy & Cancer Installation Man... My dad told me about you. &
+
+DIALOGUE
+    BCS Boy & BUT I WON'T LET YOU INSTALL ANY MORE CANCER & AND I'LL TAKE BACK THAT BROCCOLI
+
+DIALOGUE
+    Cancer Installation Man & BCS Boy... I'll SHOW YOU THE TRUE & POWER OF SPACE COMMANDER CANCER INSTALLATION MAN!

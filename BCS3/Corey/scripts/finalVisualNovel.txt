@@ -1,0 +1,73 @@
+SONG
+    darkAndGritty
+BACKGROUND
+    ruinedWorld
+CHARACTERS
+    bcsBoy & samsung
+DIALOGUE
+    Samsung & BCS Boy... &
+
+DIALOGUE
+    Samsung & You managed to make it past that... & Whatever. I'll just kill you.
+
+DIALOGUE
+    Samsung & SAMSUNG BEAM!!!!!! & 
+
+BACKGROUND
+    nothing
+CHARACTERS
+    bcsBoy & 
+DIALOGUE
+    BCS Boy & And just like that, I was finished. I knew that I never & should have put on the green jumpsuit.
+
+DIALOGUE
+    ??? & Broccoli Consumption Boy... You can't let it end like this. & I know because this is where I, too, failed.
+
+DIALOGUE
+    BCS Boy & W--who is this? &
+
+CHARACTERS
+    bcsBoy & bcsManBloody
+DIALOGUE
+    Broccoli Consumption Man & My son... you can't falter now. &
+
+DIALOGUE
+    Broccoli Consumption Man & Fight back against Samsung. And win. & I know you can do it.
+
+DIALOGUE
+Broccoli Consumption Man & Come. & We'll do it together.
+
+BACKGROUND
+    ruinedWorld
+CHARACTERS
+    bcsBoy & bcsManBloody
+DIALOGUE
+    BCS Boy and BCS Man (ghost) & TAKE THIS! & BROCCOLIHEALTH BEAM!
+
+CHARACTERS
+    & 
+DIALOGUE
+    It's almost enough! & Shout your love for BCS Man and BCS Boy at the screen to power up & the BROCCOLIHEALTH BEAM!
+
+CHARACTERS
+    bcsBoy & bcsManBloody
+DIALOGUE
+    BCS Boy and BCS Man (ghost) & TAKE THIS! & BROCCOLIHEALTH BEAM ULTRA!!!!!!!!!!!!!!!!!!!!
+
+CHARACTERS
+    bcsBoy & samsung
+DIALOGUE
+    Samsung & NOOOOOOOOOOOOOOoooooooooO!OO!OOOO!!! &
+
+CHARACTERS
+    bcsBoy &
+DIALOGUE
+    BCS Boy & It's over? &
+
+DIALOGUE
+    BCS Boy & The road ahead is long, but I can't rest yet. & I still have to rebuild Broccoli Consumption Land.
+
+CHARACTERS
+    &
+DIALOGUE
+    & And so Broccoli Consumption Land finally started on the & road to recovering from the Samsung Incident.

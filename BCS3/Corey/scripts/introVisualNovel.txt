@@ -1,9 +1,11 @@
+SONG
+    darkAndGritty
 BACKGROUND
     ruinedWorld
 CHARACTERS
    &
 DIALOGUE
-     & Five years ago... Samsung tore apart this world. & Broccoli Consumption Land used to be a paradise...
+   & Five years ago... Samsung tore apart this world. & Broccoli Consumption Land used to be a paradise...
 
 CHARACTERS 
     bcsMan & 
@@ -28,7 +30,7 @@ DIALOGUE
     & Because Samsung killed him. &
 
 CHARACTERS
-    bcsManBloody & villager
+    bcsManBloody & bcsBoy
 DIALOGUE
     BCS Boy & ...And that man, Broccoli Consumption Man & ...was my father.
 
@@ -46,7 +48,7 @@ DIALOGUE
     BCS Boy & BCS Man was a pillar of society. & Without him, there was a rift.
 
 CHARACTERS
-    villager & 
+    bcsBoy & 
 DIALOGUE
     BCS Boy & A rift society expected me to fill. &
 
@@ -76,7 +78,7 @@ DIALOGUE
 BACKGROUND
     space
 CHARACTERS
-    villager & 
+    bcsBoy & 
 DIALOGUE
     BCS Boy & Now, Samsung has taken all the broccoli off of & Broccoli Consumption Land and put it into space.
 
@@ -102,12 +104,15 @@ DIALOGUE
 BACKGROUND
     dayVillage
 CHARACTERS
-    villager & steelBeamBoy
+    bcsBoy & steelBeamBoy
 DIALOGUE
     BCS Boy & Steel Beam Boy... & I need your spaceship. To save the broccoli!
 
 DIALOGUE
-    Steel Beam Boy & BCS Boy... I wish that I could give it to you. & BUT YOU'LL NEED TO RACE ME FIRST!
+    Steel Beam Boy & BCS Boy... I wish that I could give it to you. & Well... Since we're old friends, maybe I can get it to ya'.
+
+DIALOGUE
+    Steel Beam Boy & But you'll need to beat me in a drag race first! &
 
 DIALOGUE
     Steel Beam Boy & It's time to duel! & 
