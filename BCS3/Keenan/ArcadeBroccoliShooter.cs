@@ -35,6 +35,7 @@ namespace BCS_3
         private int squaresDrawn;
         private int score;
         private int numberOfBroccoli;
+        private int origNumBroccoli;
 
         
         public ArcadeBroccoliShooter(GraphicsDevice graphicsDevice, SpriteBatch spriteBatch, ContentManager contentManager) :
@@ -109,8 +110,14 @@ namespace BCS_3
             SpriteBatch.DrawString(font, score + "", new Vector2((int)(.025 * GraphicsDevice.Viewport.Width), (int)(.025 * GraphicsDevice.Viewport.Height)), Color.Black);
 
             //Draw end
-            if(done)
+            if (done && score == origNumBroccoli * 100)
+            {
                 SpriteBatch.DrawString(font, "You are ready my son", new Vector2((int)(.375 * GraphicsDevice.Viewport.Width), (int)(.5 * GraphicsDevice.Viewport.Height)), Color.Green);
+            }
+            else if (done && score < origNumBroccoli * 100)
+            {
+                SpriteBatch.DrawString(font, "You failed me son...", new Vector2((int)(.375 * GraphicsDevice.Viewport.Width), (int)(.5 * GraphicsDevice.Viewport.Height)), Color.Red);
+            }
 
             SpriteBatch.End();
         }
@@ -132,6 +139,7 @@ namespace BCS_3
                     Broccoli_Keenan broc = new Broccoli_Keenan(image);
                     brocOrTrash = broc;
                     numberOfBroccoli++;
+                    origNumBroccoli++;
                 }
                 else
                 {
@@ -141,6 +149,7 @@ namespace BCS_3
                         Broccoli_Keenan broc = new Broccoli_Keenan(image);
                         brocOrTrash = broc;
                         numberOfBroccoli++;
+                        origNumBroccoli++;
                     }
                     else
                     {
@@ -198,7 +207,7 @@ namespace BCS_3
         {
             foreach (Rectangle box in boxes.Keys.ToList())
             {
-                if (box.Contains(state.Position))
+                if (box.Contains(state.Position) && !done)
                 {
                     AwardPoints(box, state.Position);
                     boxes[box] = false;
@@ -208,7 +217,7 @@ namespace BCS_3
 
         private void AwardPoints(Rectangle box, Point position)
         {
-            if (images.ContainsValue(box) && boxes[box])
+            if (images.ContainsValue(box) && boxes[box] && !done)
             {
                 if (imagesReverseLookup[box].image == broccoli)
                 {
