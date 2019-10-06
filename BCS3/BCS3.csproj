@@ -65,6 +65,7 @@
     <Compile Include="Zak\Planet.cs" />
     <Compile Include="Zak\Polygon.cs" />
     <Compile Include="Zak\Sprites.cs" />
+    <Compile Include="Zak\SungCruiser.cs" />
     <Compile Include="Zak\Utils.cs" />
   </ItemGroup>
   <ItemGroup>

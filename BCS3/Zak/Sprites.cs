@@ -21,6 +21,7 @@ namespace BCS_3.Zak
 
         public static Polygon Sungdroid = new Polygon(new Vector2(-15, 20), new Vector2(15, 20), new Vector2(10, 0), new Vector2(-10, 0));
         public static Polygon QueenSungdroid = new Polygon(new Vector2(-15, 20), new Vector2(15, 20), new Vector2(10, 0), new Vector2(5, 0), new Vector2(0, -40), new Vector2(-5, 0), new Vector2(-10, 0));
+        public static Polygon SungCruiser = new Polygon(new Vector2(40, 0), new Vector2(10, 10), new Vector2(0, 20), new Vector2(-10, 10), new Vector2(-40, 0), new Vector2(-10, -10), new Vector2(0, -20), new Vector2(10, -10));
 
         public static Polygon[] Digits =
         {

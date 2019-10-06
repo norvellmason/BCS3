@@ -281,7 +281,7 @@ namespace BCS_3.Zak
 
             foreach (GravitarEnemy enemy in enemies)
             {
-                Polygon polygon = Sprites.Sungdroid;
+                Polygon polygon = Sprites.SungCruiser;
                 if (enemy.Type == EnemyType.Queen)
                     polygon = Sprites.QueenSungdroid;
 
