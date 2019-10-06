@@ -2,6 +2,8 @@
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 
+using BCS_3.JonsGame;
+
 namespace BCS_3
 {
     /// <summary>
@@ -16,6 +18,8 @@ namespace BCS_3
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 1920;
+            graphics.PreferredBackBufferHeight = 1080;
         }
 
         /// <summary>
@@ -30,6 +34,8 @@ namespace BCS_3
             
 
             base.Initialize();
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            StateManager.SetGameState(new JonsGameState(graphics.GraphicsDevice, spriteBatch, Content));
         }
 
         /// <summary>
@@ -39,7 +45,6 @@ namespace BCS_3
         protected override void LoadContent()
         {
             // Create a new SpriteBatch, which can be used to draw textures.
-            spriteBatch = new SpriteBatch(GraphicsDevice);
 
             // TODO: use this.Content to load your game content here
         }
