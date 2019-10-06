@@ -17,7 +17,7 @@ namespace BCS_3.JonsGame
 
         public Broccoli (int MaxHeight, int MaxLength, int PlayerX, int PlayerY) : base(MaxHeight, MaxLength, PlayerX, PlayerY)
         {
-            this.speed = rng.Next(1, 3);
+            this.speed = rng.Next(1, 2);
             this.rotationRate = 0.01f * this.speed;
         }
     }

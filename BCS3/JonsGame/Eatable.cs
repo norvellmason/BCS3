@@ -76,7 +76,7 @@ namespace BCS_3.JonsGame
         public void Update(Vector2 PlayerPosition, int PlayerWeight){
 
 
-            float distanceFactor = (.01f * PlayerWeight) / ((PlayerPosition - this.position).Length() * 75);
+            float distanceFactor = (.1f * PlayerWeight) / ((PlayerPosition - this.position).Length() * 75);
 
             Vector2 toPlayer = (PlayerPosition - this.position);
 

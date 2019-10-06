@@ -83,8 +83,8 @@ namespace BCS_3.JonsGame
 
         public bool canEat(Eatable candidate)
         {
-            return Math.Abs(this.position.X - candidate.position.X) < EAT_RADIUS &&
-               Math.Abs(this.position.Y - candidate.position.Y) < EAT_RADIUS;
+            return Math.Abs(this.position.X - candidate.position.X) < this.imageSize.X * this.getSize() &&
+               Math.Abs(this.position.Y - candidate.position.Y) < this.imageSize.X * this.getSize();
         }
 
         private float speed()
