@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace BCS_3.Keenan
 {
-    class Trash
+    class Trash : Objects
     {
-        public Trash(Vector2 coordinate, Texture2D image)
+        public Trash(Texture2D image) : base (image)
         {
-            this.hitbox = new Rectangle(new Point((int)coordinate.X, -40), new Point((int)coordinate.X, 0));
-            this.position = coordinate;
+            //this.hitbox = new Rectangle(new Point((int)coordinate.X, -40), new Point((int)coordinate.X, 0));
+            //this.position = coordinate;
 
             this.image = image;
         }

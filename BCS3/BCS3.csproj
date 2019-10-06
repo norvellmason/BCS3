@@ -49,6 +49,7 @@
     <Compile Include="JonsGame\Donut.cs" />
     <Compile Include="JonsGame\Eatable.cs" />
     <Compile Include="JonsGame\Eater.cs" />
+    <Compile Include="Keenan\Objects.cs" />
     <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
     <Compile Include="Keenan\Broccoli_Keenan.cs" />
     <Compile Include="Keenan\Child.cs" />
@@ -69,6 +70,8 @@
     <Compile Include="Zak\GravitarBroccoli.cs" />
     <Compile Include="Zak\GravitarBullet.cs" />
     <Compile Include="Zak\GravitarPlayer.cs" />
+    <Compile Include="Zak\DemoLevel.cs" />
+    <Compile Include="Zak\Level.cs" />
     <Compile Include="Zak\Particle.cs" />
     <Compile Include="Zak\Planet.cs" />
     <Compile Include="Zak\Polygon.cs" />
