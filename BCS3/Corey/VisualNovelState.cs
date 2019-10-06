@@ -81,9 +81,10 @@ namespace BCS_3
 
         public override void Draw(GameTime gameTime)
         {
-            SpriteBatch.Begin();
+            if (this.firstTime == true) return;
 
-            if (this.firstTime == true) return; 
+            SpriteBatch.Begin();
+            
 
             GraphicsDevice.Clear(Color.Black);
             SpriteBatch.Draw(this.currentBackground, this.bgPos, this.bcsWhite);

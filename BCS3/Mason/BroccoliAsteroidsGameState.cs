@@ -26,7 +26,7 @@ namespace BCS_3.Mason
         private static GraphicsDevice staticGraphicsDevice;
         private static Random random = new Random();
 
-        private float timeRemaining = 10f;
+        private float timeRemaining = 60f;
         private SpriteFont arialFont;
         private Song racingSong;
 
