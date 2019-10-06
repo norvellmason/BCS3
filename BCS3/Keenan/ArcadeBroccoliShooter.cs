@@ -48,8 +48,6 @@ namespace BCS_3
             GraphicsDevice.Clear(Color.White);
 
             SpriteBatch.Begin();
-            
-            SpriteBatch.Draw(trashCans[0].image, trashCans[0].position, Color.White);
 
             for (int i = 0; i < 4; i++)
                 for (int j = 0; j < 4; j++)

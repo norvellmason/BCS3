@@ -35,7 +35,7 @@ namespace BCS_3
         {
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            StateManager.SetGameState(new BroccoliGravitar(graphics.GraphicsDevice, spriteBatch, Content));
+            StateManager.SetGameState(new ArcadeBroccoliShooter(graphics.GraphicsDevice, spriteBatch, Content));
 
             base.Initialize();
         }
