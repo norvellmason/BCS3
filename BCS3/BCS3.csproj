@@ -62,6 +62,8 @@
     <Compile Include="Zak\GravitarBroccoli.cs" />
     <Compile Include="Zak\GravitarBullet.cs" />
     <Compile Include="Zak\GravitarPlayer.cs" />
+    <Compile Include="Zak\DemoLevel.cs" />
+    <Compile Include="Zak\Level.cs" />
     <Compile Include="Zak\Particle.cs" />
     <Compile Include="Zak\Planet.cs" />
     <Compile Include="Zak\Polygon.cs" />
