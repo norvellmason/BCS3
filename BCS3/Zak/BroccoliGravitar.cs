@@ -113,13 +113,13 @@ namespace BCS_3.Zak
         {
             float angle = (float)random.NextDouble() * 2 * (float)Math.PI;
             if (level.HasPlatform)
-                angle = -planets[0].Angle + (float)(random.NextDouble() - 0.5f) * 0.2f * (float)Math.PI;
+                angle = planets[0].Angle + (float)Math.PI + (float)(random.NextDouble() - 0.5f) * 0.2f;
 
             float x = (float)Math.Cos(angle) * 600.0f;
             float y = (float)Math.Sin(angle) * 600.0f;
 
             player.Alive = true;
-            player.Position = new Vector2(x, y);
+            player.Position = new Vector2(x, -y);
             player.Velocity = new Vector2(0, 0);
 
             foreach (GravitarEnemy enemy in enemies)
@@ -379,9 +379,9 @@ namespace BCS_3.Zak
                         case EnemyType.SungBrute:
                             float angle = Utils.AngleOf(player.Position - enemy.Position);
 
-                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle - 0.15f, 300), false));
+                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle - 0.2f, 300), false));
                             bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle, 300), false));
-                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle + 0.15f, 300), false));
+                            bullets.Add(new GravitarBullet(enemy.Position, Utils.VectorFrom(angle + 0.2f, 300), false));
 
                             enemy.firingTimer = enemy.firingDelay + (float)random.NextDouble();
                             bigShoot.Play();
@@ -535,7 +535,7 @@ namespace BCS_3.Zak
 
             SpriteBatch.Begin(transformMatrix: Matrix.CreateScale(scale) * Matrix.CreateTranslation(GraphicsDevice.Viewport.Width / 2, GraphicsDevice.Viewport.Height / 2, 0));
 
-            foreach(Planet planet in planets)
+            foreach (Planet planet in planets)
                 DrawPolygon(SpriteBatch, planet.Polygon, planet.Position, planet.Angle, 1.0f, Color.Blue);
 
             if(OnScreen(player.Position, SpriteBatch.GraphicsDevice.Viewport, screenMargin))

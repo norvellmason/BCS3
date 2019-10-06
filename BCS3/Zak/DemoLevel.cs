@@ -18,9 +18,9 @@ namespace BCS_3.Zak
                     return 0.2f;
 
                 if (Number == 2)
-                    return 0.3f;
+                    return 0.2f;
 
-                return 0.4f;
+                return 0.3f;
             }
         }
         public float BroccoliChance
