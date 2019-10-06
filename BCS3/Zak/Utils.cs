@@ -10,28 +10,21 @@ namespace BCS_3.Zak
 {
     public class Utils
     {
-        /// <summary>
-        /// Determines if the given point is inside the polygon
-        /// </summary>
-        /// <param name="polygon">the vertices of polygon</param>
-        /// <param name="testPoint">the given point</param>
-        /// <returns>true if the point is inside the polygon; otherwise, false</returns>
-        public static bool IsPointInPolygon4(Vector2[] polygon, Vector2 testPoint)
+        public static Random random = new Random();
+
+        public static Vector2 VectorFrom(float rotation, float length = 1.0f)
         {
-            bool result = false;
-            int j = polygon.Count() - 1;
-            for (int i = 0; i < polygon.Count(); i++)
-            {
-                if (polygon[i].Y < testPoint.Y && polygon[j].Y >= testPoint.Y || polygon[j].Y < testPoint.Y && polygon[i].Y >= testPoint.Y)
-                {
-                    if (polygon[i].X + (testPoint.Y - polygon[i].Y) / (polygon[j].Y - polygon[i].Y) * (polygon[j].X - polygon[i].X) < testPoint.X)
-                    {
-                        result = !result;
-                    }
-                }
-                j = i;
-            }
-            return result;
+            return new Vector2((float)Math.Cos(rotation), -(float)Math.Sin(rotation)) * length;
+        }
+
+        public static float AngleOf(Vector2 vector)
+        {
+            return (float)Math.Atan2(-vector.Y, vector.X);
+        }
+
+        public static int DigitsToRepresent(int number)
+        {
+            return (int)Math.Floor(Math.Log10(number + 1));
         }
     }
 }

@@ -41,16 +41,38 @@
   <PropertyGroup>
     <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>BCS_3.Program</StartupObject>
+  </PropertyGroup>
   <ItemGroup>
+    <Compile Include="JonsGame\Cookie.cs" />
+    <Compile Include="JonsGame\Donut.cs" />
+    <Compile Include="JonsGame\Eatable.cs" />
+    <Compile Include="JonsGame\Eater.cs" />
+    <Compile Include="Mason\BroccoliAsteroidsGameState.cs" />
+    <Compile Include="Keenan\Broccoli_Keenan.cs" />
+    <Compile Include="Keenan\Child.cs" />
+    <Compile Include="Keenan\Trash.cs" />
+    <Compile Include="Mason\RaceCar.cs" />
     <Compile Include="Zak\BroccoliGravitar.cs" />
-    <Compile Include="Broccoli.cs" />
+    <Compile Include="JonsGame\Broccoli.cs" />
     <Compile Include="Corey\VisualNovelState.cs" />
     <Compile Include="Game1.cs" />
     <Compile Include="GameState.cs" />
+    <Compile Include="JonsGame\JonsGameState.cs" />
     <Compile Include="Keenan\ArcadeBroccoliShooter.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="StateManager.cs" />
+    <Compile Include="Zak\GravitarEnemy.cs" />
+    <Compile Include="Zak\GravitarBroccoli.cs" />
+    <Compile Include="Zak\GravitarBullet.cs" />
+    <Compile Include="Zak\GravitarPlayer.cs" />
+    <Compile Include="Zak\Particle.cs" />
+    <Compile Include="Zak\Planet.cs" />
+    <Compile Include="Zak\Polygon.cs" />
+    <Compile Include="Zak\Sprites.cs" />
+    <Compile Include="Zak\SungCruiser.cs" />
     <Compile Include="Zak\Utils.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -143,6 +165,7 @@
     <None Include="Content\corey\characters\samsung.png" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="Content\Jon\" />
     <Folder Include="Content\Keenan\" />
     <Folder Include="Content\Mason\" />
     <Folder Include="Mason\" />
@@ -152,6 +175,7 @@
     <Folder Include="Content\corey\music\" />
     <Folder Include="Content\corey\fonts\" />
   </ItemGroup>
+  <ItemGroup />
   <ItemGroup />
   <ItemGroup>
     <Content Include="Corey\scripts\testScript.txt">
