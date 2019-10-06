@@ -3,7 +3,7 @@
 
 /outputDir:bin
 /intermediateDir:obj
-/platform:Windows
+/platform:DesktopGL
 /config:
 /profile:Reach
 /compress:False
@@ -491,6 +491,12 @@
 /processorParam:MakeSquare=False
 /processorParam:TextureFormat=Color
 /build:Mason/Particle_Circle.png
+
+#begin Mason/Subterranean_Monster.mp3
+/importer:Mp3Importer
+/processor:SongProcessor
+/processorParam:Quality=Best
+/build:Mason/Subterranean_Monster.mp3
 
 #begin Mason/test.png
 /importer:TextureImporter

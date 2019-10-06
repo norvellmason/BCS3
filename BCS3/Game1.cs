@@ -36,8 +36,14 @@ namespace BCS_3
             // TODO: Add your initialization logic here
             spriteBatch = new SpriteBatch(GraphicsDevice);
 
-            StateManager.SetGameState(new BroccoliGravitar(GraphicsDevice, spriteBatch, Content)); 
-            
+            StateManager.AddGameState(new ArcadeBroccoliShooter(GraphicsDevice, spriteBatch, this.Content));
+            StateManager.AddGameState(new VisualNovelState(GraphicsDevice, spriteBatch, this.Content, "introVisualNovel.txt"));
+            StateManager.AddGameState(new Mason.BroccoliAsteroidsGameState(GraphicsDevice, spriteBatch, this.Content));
+            StateManager.AddGameState(new VisualNovelState(GraphicsDevice, spriteBatch, this.Content, "interimVisualNovel1.txt"));
+            StateManager.AddGameState(new Zak.BroccoliGravitar(GraphicsDevice, spriteBatch, this.Content));
+            StateManager.AddGameState(new VisualNovelState(GraphicsDevice, spriteBatch, this.Content, "interimVisualNovel2.txt"));
+            StateManager.AddGameState(new JonsGame.JonsGameState(GraphicsDevice, spriteBatch, this.Content, GraphicsDevice.Viewport.Height, GraphicsDevice.Viewport.Width));
+            StateManager.AddGameState(new VisualNovelState(GraphicsDevice, spriteBatch, this.Content, "finalVisualNovel.txt"));            
 
             base.Initialize();
         }

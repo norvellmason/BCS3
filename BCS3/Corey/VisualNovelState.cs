@@ -284,7 +284,7 @@ namespace BCS_3
             this.textures["bcsBoy"] = contentManager.Load<Texture2D>("corey/characters/bcsBoy");
             this.textures["cancerInstallationMan"] = contentManager.Load<Texture2D>("corey/characters/cancerInstallationMan");
 
-            this.songs["darkAndGritty"] = contentManager.Load<Song>("corey/music/fight"); 
+            this.songs["darkAndGritty"] = contentManager.Load<Song>("corey/music/fight");
 
             this.speakFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont");
             this.nameFont = contentManager.Load<SpriteFont>("corey/fonts/bcsFont2");
